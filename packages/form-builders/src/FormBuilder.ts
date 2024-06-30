@@ -1,5 +1,5 @@
 export interface Field {
-  type: "text" | "number" | "select";
+  type: 'text' | 'number' | 'select';
   name: string;
   label: string;
   options?: string[];
@@ -9,17 +9,17 @@ export class FormBuilder {
   private fields: Field[] = [];
 
   addTextField(name: string, label: string): FormBuilder {
-    this.fields.push({ type: "text", name, label });
+    this.fields.push({ type: 'text', name, label });
     return this;
   }
 
   addNumberField(name: string, label: string): FormBuilder {
-    this.fields.push({ type: "number", name, label });
+    this.fields.push({ type: 'number', name, label });
     return this;
   }
 
   addSelectField(name: string, label: string, options: string[]): FormBuilder {
-    this.fields.push({ type: "select", name, label, options });
+    this.fields.push({ type: 'select', name, label, options });
     return this;
   }
 

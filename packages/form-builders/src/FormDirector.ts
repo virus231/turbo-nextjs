@@ -1,4 +1,4 @@
-import { Field, FormBuilder } from "./FormBuilder";
+import type { Field, FormBuilder } from './FormBuilder';
 
 export class FormDirector {
   private builder: FormBuilder;
@@ -9,22 +9,22 @@ export class FormDirector {
 
   createLoginForm(): Field[] {
     return this.builder
-      .addTextField("username", "Username")
-      .addTextField("password", "Password")
+      .addTextField('username', 'Username')
+      .addTextField('password', 'Password')
       .build();
   }
 
   createRegistrationForm(): Field[] {
     return this.builder
-      .addTextField("username", "Username")
-      .addTextField("email", "Email")
-      .addTextField("password", "Password")
-      .addNumberField("age", "Age")
-      .addSelectField("country", "Country", [
-        "USA",
-        "Canada",
-        "UK",
-        "Australia",
+      .addTextField('username', 'Username')
+      .addTextField('email', 'Email')
+      .addTextField('password', 'Password')
+      .addNumberField('age', 'Age')
+      .addSelectField('country', 'Country', [
+        'USA',
+        'Canada',
+        'UK',
+        'Australia',
       ])
       .build();
   }
